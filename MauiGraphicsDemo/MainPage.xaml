@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="MauiGraphicsDemo.MainPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:drawables="clr-namespace:MauiGraphicsDemo.Drawables">
+
+  <ContentPage.Resources>
+    <drawables:ClockDrawable x:Key="clockDrawable" />
+  </ContentPage.Resources>
+
+  <Grid
+    IsVisible="True"
+    RowDefinitions="auto"
+    RowSpacing="16">
+    <GraphicsView
+      x:Name="ClockGraphicsView"
+      Grid.Row="0"
+      Drawable="{StaticResource clockDrawable}" />
+  </Grid>
+
+  <!--  Neither way works. But simply having the graphics view works.  -->
+  <!--<VerticalStackLayout>
+    <GraphicsView x:Name="ClockGraphicsView" Drawable="{StaticResource clockDrawable}" />
+  </VerticalStackLayout>-->
+
+</ContentPage>
